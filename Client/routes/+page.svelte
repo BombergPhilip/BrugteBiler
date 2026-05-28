@@ -14,11 +14,13 @@
 
 <main>
 	<section class="intro">
-		<p class="eyebrow">Client</p>
+		
 		<h1>Brugte biler</h1>
 		<p>
-			Frontend ligger nu i <code>Client</code>, mens bil-data og backend-logik ligger i
-			<code>Server</code>.
+			Vi har biler til en hver smag i en varierende pris klasse
+		</p>
+		<p>
+			Vi har både din første bil og din næste bil 
 		</p>
 	</section>
 
@@ -28,6 +30,7 @@
 				<div>
 					<h2>{car.make} {car.model}</h2>
 					<p>{car.year} · {car.mileageKm.toLocaleString('da-DK')} km</p>
+					<p> antal ejere {car.NumberOfOwners} </p>
 				</div>
 				<strong>{car.priceDkk.toLocaleString('da-DK')} kr.</strong>
 			</article>

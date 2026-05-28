@@ -5,7 +5,8 @@
 		"model": "Golf",
 		"year": 2019,
 		"mileageKm": 82500,
-		"priceDkk": 154900
+		"priceDkk": 154900,
+		"NumberOfOwners": 5
 	},
 	{
 		"id": 2,
@@ -13,6 +14,25 @@
 		"model": "Yaris",
 		"year": 2021,
 		"mileageKm": 42100,
-		"priceDkk": 139500
+		"priceDkk": 139500,
+		"NumberOfOwners": 3
+	},
+	{
+		"id": 3,
+		"make": "Bently",
+		"model": "bentayga",
+		"year": 2018,
+		"mileageKm": 42100,
+		"priceDkk": 300000,
+		"NumberOfOwners": 4
+	},
+	{
+		"id": 4,
+		"make": "Honda",
+		"model": "civic",
+		"year": 2015,
+		"mileageKm": 100000,
+		"priceDkk": 20000,
+		"NumberOfOwners": 10
 	}
 ]

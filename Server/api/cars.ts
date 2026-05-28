@@ -7,6 +7,7 @@ export type Car = {
 	year: number;
 	mileageKm: number;
 	priceDkk: number;
+	NumberOfOwners: number;
 };
 
 export function listCars(): Car[] {
