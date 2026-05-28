@@ -1,42 +1,32 @@
-# sv
+# BrugteBiler
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Projektet er sat op som en SvelteKit-baseret client/server-arkitektur.
 
-## Creating a project
+## Struktur
 
-If you're seeing this, you've probably already done this step. Congrats!
+- `Client/` indeholder Svelte UI, routes, assets og statiske filer.
+- `Client/routes/api/` indeholder de SvelteKit API-routes, som browseren kalder.
+- `Server/` indeholder backend-logik og data, som API-routes importerer fra.
+- Roden indeholder build-konfiguration (`package.json`, `svelte.config.js`, `vite.config.ts`, `tsconfig.json`).
+
+## Udvikling
+
+Installer dependencies, hvis de mangler:
 
 ```sh
-# create a new project
-npx sv create my-app
+npm install
 ```
 
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-npx sv@0.15.3 create --template minimal --types ts --install npm .
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Start udviklingsserveren:
 
 ```sh
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+Frontend henter eksempeldata fra `/api/cars`, som bruger `Server/api/cars.ts`.
 
-To create a production version of your app:
+## Build
 
 ```sh
 npm run build
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

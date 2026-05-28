@@ -1,0 +1,18 @@
+[
+	{
+		"id": 1,
+		"make": "Volkswagen",
+		"model": "Golf",
+		"year": 2019,
+		"mileageKm": 82500,
+		"priceDkk": 154900
+	},
+	{
+		"id": 2,
+		"make": "Toyota",
+		"model": "Yaris",
+		"year": 2021,
+		"mileageKm": 42100,
+		"priceDkk": 139500
+	}
+]
