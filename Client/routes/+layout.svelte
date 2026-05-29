@@ -9,6 +9,7 @@
 <svelte:head>
 	<link rel="icon" href={favicon} />
 </svelte:head>
+
 <Sidebar.Provider>
 	<Sidebar.Root>
 		<Sidebar.Header>
@@ -22,22 +23,28 @@
 				<Sidebar.GroupContent>
 					<Sidebar.Menu>
 						<Sidebar.MenuItem>
-							<Sidebar.MenuButton href="/">
-								Forside
+							<Sidebar.MenuButton>
+								{#snippet child({ props })}
+									<a href="/" {...props}>Forside</a>
+								{/snippet}
 							</Sidebar.MenuButton>
 						</Sidebar.MenuItem>
 
 						<Sidebar.MenuItem>
-							<Sidebar.MenuButton href="/biler">
-								Biler
-							</Sidebar.MenuButton>
-						</Sidebar.MenuItem>
-						<Sidebar.MenuItem>
-							<Sidebar.MenuButton href="/salg">
-								Sælg din bil
+							<Sidebar.MenuButton>
+								{#snippet child({ props })}
+									<a href="/biler" {...props}>Biler</a>
+								{/snippet}
 							</Sidebar.MenuButton>
 						</Sidebar.MenuItem>
 
+						<Sidebar.MenuItem>
+							<Sidebar.MenuButton>
+								{#snippet child({ props })}
+									<a href="/salg" {...props}>Sælg din bil</a>
+								{/snippet}
+							</Sidebar.MenuButton>
+						</Sidebar.MenuItem>
 					</Sidebar.Menu>
 				</Sidebar.GroupContent>
 			</Sidebar.Group>
@@ -45,8 +52,7 @@
 	</Sidebar.Root>
 
 	<Sidebar.Inset>
-		<Sidebar.Trigger />
-
-{@render children()}
+		<Sidebar.Trigger class="sticky top-4 z-50 m-4 bg-background/90 shadow-sm backdrop-blur" />
+		{@render children()}
 	</Sidebar.Inset>
 </Sidebar.Provider>
